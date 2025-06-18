@@ -1,0 +1,18 @@
+[package]
+name = "cpdb-rs"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+bindgen = "0.69"
+pkg-config = "0.3"
+
+[dependencies]
+libc = "0.2"
+thiserror = "1.0"  # For error handling
+once_cell = "1.18" # For safe global initialization
+log = "0.4"        # For logging
+
+[features]
+frontend = []      # Feature gate for frontend API
+backend = []       # Feature gate for backend API
